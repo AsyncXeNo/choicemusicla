@@ -70,7 +70,7 @@ async def main() -> None:
                 description_image_tags = driver.find_elements(By.CSS_SELECTOR, '.rte img')
                 description_images = [image.get_attribute('src') for image in description_image_tags]
 
-                description = driver.find_element(By.CSS_SELECTOR, '.rte').get_attribute('innerHTML').strip()
+                description = driver.find_element(By.CSS_SELECTOR, '.rte').get_attribute('innerText').strip()
 
                 variant_inputs = driver.find_elements(By.CSS_SELECTOR, '.radio__button')
                 variant_info = []
