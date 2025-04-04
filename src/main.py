@@ -86,6 +86,7 @@ async def main() -> None:
                 data.append({
                     'url': url,
                     'title': title,
+                    'collections': [],
                     'price': price,
                     'main_image': main_image,
                     'images': images,
