@@ -76,7 +76,7 @@ async def main() -> None:
                 variant_info = []
                 for variant_input in variant_inputs:
                     variant_input.click()
-                    time.sleep(0.2)
+                    time.sleep(0.5)
                     variant_info.append({
                         'name': variant_input.find_element(By.TAG_NAME, 'input').get_attribute('value'),
                         'price': float(driver.find_element(By.CSS_SELECTOR, '.product__price span').get_attribute('innerText').replace('$', '').replace(',', '').strip()),
